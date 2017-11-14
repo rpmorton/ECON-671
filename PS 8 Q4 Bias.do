@@ -1,8 +1,9 @@
 
 /* for PS 8 Q4 a ii */
 /* Created by RM on 2017.11.04 */
+/* Clearly this is biased! */
 
-local theta = .9
+local theta = .7
 
 local loops = 3000
 
@@ -34,7 +35,7 @@ local theta_hat_mle_`i' = theta_hat_mle
 clear
 set obs `loops'
 
-g theta_hat_mme = 0
+g theta_hat_mle = 0
 
 
 forv j = 1(1)`loops' {
