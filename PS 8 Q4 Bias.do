@@ -5,14 +5,16 @@
 
 local theta = .7
 
-local loops = 10
+local loops = 300
+
+local obs = 2000
 
 forv i = 1(1)`loops' {
 
 
 clear
 
-set obs `loops'
+set obs `obs'
 
 
 

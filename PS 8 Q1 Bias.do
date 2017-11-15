@@ -44,5 +44,6 @@ replace theta_hat_mme = `theta_hat_mme_`j'' if [_n] == `j'
 
 }
 
+su theta_hat_mme
 
 
