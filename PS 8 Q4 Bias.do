@@ -5,7 +5,7 @@
 
 local theta = .7
 
-local loops = 3000
+local loops = 10
 
 forv i = 1(1)`loops' {
 
@@ -26,7 +26,10 @@ g sample_log = ln(sample)
 
 egen sum_log_sample = sum(sample_log)
 
-g theta_hat_mle = (- `loops')/ (sum_log_sample)
+g ones = 1
+egen nobs = sum(ones)
+
+g theta_hat_mle = (- nobs)/ (sum_log_sample)
 
 local theta_hat_mle_`i' = theta_hat_mle
 
